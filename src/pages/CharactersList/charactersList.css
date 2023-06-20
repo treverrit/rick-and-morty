@@ -18,11 +18,17 @@
     border-radius: 1rem 1rem 0 0;
 }
 
-.name {
-    margin: 1rem 5%;
-}
+.name {margin: 1rem 5%;}
 
 .character-link {
     text-decoration: none;
     color: #3a3a7e;
+}
+
+@media screen and (max-width: 850px) {
+    .character-card{width: 40%;}
+}
+
+@media screen and (max-width: 550px) {
+    .character-card{width: 80%;}
 }

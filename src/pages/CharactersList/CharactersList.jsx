@@ -1,20 +1,8 @@
 import React from 'react'
-import { useQuery, gql } from '@apollo/client'
-
+import { useCharListQuery } from '../../hooks/QueryHooks'
 import './charactersList.css'
 import { Link } from 'react-router-dom'
 
-const GET_CHARACTERS = gql`
-query {
-  characters {
-    results {
-      id
-      name
-      image
-    }
-  }
-}
-`
 
 function CharacterCard({character}) {
   return (
@@ -28,7 +16,7 @@ function CharacterCard({character}) {
 }
 
 function CharactersList() {
-  const {error, loading, data} = useQuery(GET_CHARACTERS)
+  const {error, loading, data} = useCharListQuery()
 
   if (loading) {return <p>spinner</p>}
   if (error) {return <p>Something went wrong</p>}

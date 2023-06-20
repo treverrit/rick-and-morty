@@ -1,24 +1,10 @@
-import { useQuery, gql } from '@apollo/client'
 import React from 'react'
 import { useParams } from 'react-router-dom'
-
-const GET_CHARACTER = gql`
-query GetCharacter($id: ID!) {
-  character(id: $id) {
-    name
-    id
-    image
-    episode {
-      name
-      episode
-    }
-  }
-}
-`
+import { useCharQuery } from '../../hooks/QueryHooks'
 
 function Character() {
   const {id} = useParams()
-  const {data, loading, error} = useQuery(GET_CHARACTER, {variables: {id}})
+  const {data, loading, error} = useCharQuery(id)
 
   if (loading) {return <p>loading</p>}
   if (error) {return <p>something went wrong</p>}
