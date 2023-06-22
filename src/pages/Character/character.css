@@ -1,0 +1,47 @@
+.character {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    margin: 2rem 0 2rem 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+}
+
+.characteristics {
+    background-color: rgb(1, 1, 82);
+    color: rgb(5, 146, 146);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.char-image {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.char-name {
+    margin-left: 0.8rem;
+    line-height: 30px;
+    font-size: 2.2rem;
+}
+
+.char-stats {
+    padding-bottom: 1rem;
+}
+
+.char-stat {
+    margin-left: 1.2rem;
+    font-size: 1rem;
+    line-height: 5px;
+}
+
+.episodes {
+    background-color: rgb(21, 108, 146);
+    color: rgb(31, 34, 122);
+    border-radius: 0 0 1rem 1rem;
+}
+
+.episode {
+    font-size: 0.75rem;
+    margin-left: 1.2rem;
+}

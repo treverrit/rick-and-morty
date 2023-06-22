@@ -17,9 +17,16 @@ query GetCharacter($id: ID!) {
     name
     id
     image
+    gender
     episode {
       name
       episode
+    }
+    location {
+      name
+    }
+    origin {
+      name
     }
   }
 }
